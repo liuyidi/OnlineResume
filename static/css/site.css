@@ -1,0 +1,189 @@
+
+/************************************header***********************************/
+/*header*/
+.header_wrap{ background-color:#2C3E50; height:60px; position:fixed; left:0; top:0; z-index:99999; width:100%; transition:all 0.5s ease; opacity:0.9;}
+.header{width:1200px; margin:0 auto;}
+.header .logo{float:left; display:inline;width:120px; height:60px;}
+.header .nav{float:left; display: inline; margin-left:35px; line-height:60px;}
+.header .nav ul li{display:inline; height:100%; transition:all 0.5s ease;}
+.header .nav ul li a{color:#fff; padding:0 30px;  font-size:16px; text-decoration: none;}
+/*.header .nav .nav-search{float: left; display: inline; height: 60px; width:120px; margin-left:30px; line-height:60px;}
+.header .nav .nav-search .nav-input{height: 60px; line-height: 60px;}*/
+.header .menu{float:right; display:inline; position:relative;}
+/*.header .inbox{position: relative; display: inline; line-height: 60px; height: 60px;}*/
+.header .menu .menu_islogin{position:relative; z-index:100; width:170px;}
+.header .menu .menu_islogin .uinfo{height:60px; line-height:60px;}
+.header .menu .menu_islogin .uinfo a{padding:0 10px 0; display:block; overflow:hidden;}
+.header .menu .menu_islogin .uinfo .ulink img{border:1px dashed #d9d9d9;}
+.header .menu .menu_islogin .uinfo .ulink *{display:inline-block;vertical-align:middle;}
+.header .menu .menu_islogin .uinfo a span{color:#fff; padding:0 12px 0;}
+.header .menu .menu_islogin .userlist{position:absolute; display: none; z-index:1000; left:0; top:60px; width:168px; border:1px solid #d9d9d9; background-color:#fff;}
+.header .menu .menu_islogin .userlist li{height:30px; line-height:30px; list-style-type: none;}
+.header .menu .menu_islogin .userlist li a{width:168px; display:block; text-align:center; border-bottom:1px dashed #eee; line-height:30px; color:#555;}
+.header .menu .menu_islogin .userlist li a:hover{background-color:#1f6692; color:#fff; text-decoration: none;}
+
+/*container*/
+.container{margin: 0 auto; width: 1200px;}
+
+/*banner*/
+.banner{height: 200px;margin-top: 60px; padding: 25px 0px; border: 1px dashed #eee;}
+.banner-box{width:1000px; height: 200px; overflow: hidden; margin: 0px auto; z-index: 1; position: relative;}
+#lists{ width: 5000px; height: 200px; position: absolute; }
+#lists .list{float: left; width:1000px; height: 200px;}
+#buttons {position:absolute; height: 10px; width: 100px; z-index: 2; top: 180px; left:500px;}
+#buttons span { cursor: pointer; float: left; border: 1px solid #fff; width: 10px; height: 10px; border-radius: 50%; background: #333; margin-right: 5px;}
+#buttons .on {  background: red;}
+.arrow { cursor: pointer; display: none; line-height: 39px; text-align: center; font-size: 36px; font-weight: bold; width: 40px; height: 40px;  position: absolute; z-index: 2; top: 180px; background-color: RGBA(0,0,0,.3); color: #fff;}
+.arrow:hover { background-color: RGBA(0,0,0,.7);}
+#lists:hover .arrow { display: block;}
+#prev { left: 20px;}
+#next { right: 20px;}
+
+/*maincontent*/
+.main{background-color:#fff; width:746px; height:auto; display:inline; float:left; border:1px solid #d9d9d9; margin-bottom:50px;}
+
+.content{ position: relative; clear: both; }
+.content-list{  border-bottom: 1px solid #efefef; padding: 20px 0px 20px;}
+.content-list-cont{height: 100px;}
+
+/*pagination*/
+.pagination{ margin:10px auto; margin-left:100px;}
+ul.pagination li{
+  border: 1px #e1e1e1 solid;
+  text-decoration: none;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  background: white;
+  margin: 0 2px;
+  vertical-align: middle;
+}
+ul.pagination li a{
+	text-decoration: none; color: #000;
+}
+ul.pagination li.active{
+	background: #2c3e50;
+}
+ul.pagination li.active a{
+	color: #fff;
+}
+
+/*sider*/
+.sider{width:420px; background-color:#fff; display:inline; float:right; height:auto; border:1px solid #d9d9d9;}
+
+.sider .sider_uinfo{padding:15px 20px;width:260px; height:80px; border-bottom:2px solid #dfdfe1; position:relative;}
+.sider .sider_uinfo .sider_img{float:left; width:80px; height:80px; border:1px dashed #d9d9d9; display:inline;}
+.sider .sider_uinfo .sider_intro{width:160px; margin-left:18px; float:left; display:inline;}
+.sider .sider_uinfo .sider_intro h3{font-weight:normal; height:24px; line-height:24px; overflow:hidden;}
+.sider .sider_uinfo .sider_intro p{font-size:14px; color:#777; height:50px; line-height:20px; padding-top:6px;}
+
+.sider .sider_list{clear:both; margin-top:10px; font-size:14px; width:300px; margin-bottom:20px;}
+.sider .sider_list li{padding:0 20px; height:49px; line-height:49px; position:relative; background-color:#efefef; border-bottom:1px dashed #d9d9d9;}
+
+
+/******************************************footer******************************************/
+
+.footer{width:100%; background-color:#434343; height:145px; margin:0px auto; color:#999; clear:both;}
+.footer_content{padding-top:30px; padding-bottom: 10px;}
+.footer_content ul,li{list-style-type:none;}
+.footer_content div{float:left; display:inline; height:100px; border:1px dashed #eee;}
+.footer_content .footer_left{width:410px; margin-right:25px;}
+.footer_content .footer_center{width:250px; margin-right:25px; padding-right:19px;}
+.footer_content .footer_right{width:465px;}
+
+
+.gotop{position: fixed; right: 15px; bottom: 10px; z-index: 1030;}
+.gotop a{ display: block; position: relative; margin: 1px 0; outline: none;height: 52px;width: 52px;
+  background-color: #eee; border: 1px solid #eee;
+}
+
+/*************************WriteResume********************************************/
+.rmain{background-color:#fff; width:76%; height:auto; display:inline; float:left; border:1px solid #d9d9d9; margin-bottom:50px;}
+.rsider{width:18%; background-color:#fff; display:inline; float:right; height:auto; border:1px solid #d9d9d9;}
+
+.sidebar{width: 216px; }
+.sidebar-fixed{position: fixed; _position:absolute; top:70px; right:100px; z-index: 250px;}
+
+/*******************************************Login&register******************************************/
+
+input[type="text"],input[type="password"]{border:1px solid #f1f1f1; outline:none; font:16px "微软雅黑",Arial; height:40px; padding:6px 10px;}
+
+.login_wrapper{width:760px; margin:0 auto; color:#777; font-size:16px; padding-top:80px; zoom:1;}
+.login_box{min-height:300px; background:#fff; padding:40px; overflow:hidden; position:relative;}
+.login_left{display:block;width:450px; margin:0; border-right:1px solid #ccc; float:left;}
+.login_title{font:"微软雅黑"; margin-bottom:25px; padding-bottom:10px; border-bottom:1px solid #eceef1;}
+.login_form input#email,.login_form input#password{width:350px; font-size:16px;}
+.login_form input[type="text"],.login_form input[type="password"]{margin:0 0 25px 30px;}
+.checkbox{ vertical-align:top; float:left; cursor:default; margin-left:30px;}
+.login_error{position: absolute; display: none; top: 50px; left: 0; font-size: 13px; line-height: 30px; color:red;}
+.submit{ width:155px; height:46px; font-size:16px; clear:both; float:left; color:#fff; border:none; text-align:center; margin-left:30px; margin-top:15px;}
+.submit_register{background:#36A9E5; }
+.submit_login{background:#17B385;}	
+
+.login_right{float:right; width:199px; margin:10px 0 0 30px; line-height:30px; position:relative; text-align:center;}
+.login_right h3{font: "微软雅黑";}
+.login_now{width:155px; font-size:16px; color:#fff; height:46px; line-height:46px; vertical-align:middle; background:#17B385; margin-left:22px;  float:left;border:none; text-align:center;}
+.register_now{width:155px; font-size:16px; color:#fff; height:46px; line-height:46px; vertical-align:middle; background:#36A9E5; margin-left:22px;  float:left;border:none; text-align:center;}
+
+.login_others{clear:both; display:block; margin-top:50px; line-height:50px;  color: #a2a8b3;}
+
+.pwd_lost{color: #a2a8b3;float:right; margin-right:60px;margin-top:15px; line-height: 50px;}
+
+/******************************************Sideinfo******************************************/
+
+.panel-body .word{float: left;margin-left: 10px;width: 200px;}
+.panel-body .img {width: 90px;float: left;display: inline;}
+.panel-body .img .imgcircle{display: block;border-radius: 80px; width: 90px; height: 90px;}
+
+
+/******************************************About******************************************/
+
+#main{min-height: 750px; padding: 20px 0;}
+.about-left{
+	position: relative;
+	width: 220px; 
+	padding: 0 20px; 
+	overflow: visible; 
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	list-style-type: none;
+	float: left;
+}
+.about-right{
+	margin-left: 280px;
+	background: #fff;
+	overflow: hidden;
+	-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.about-left li{
+	position: relative;
+	width:220px;
+	height: 60px;
+	overflow: visible;
+	border-bottom: 1px solid #edf1f2;
+}
+.about-left li.selected:before{
+	content:" ";
+	position:  absolute;
+	top: 0;
+	width: 2px;
+	height: 60px;
+	background: #F84E4E;
+	left: -21px;
+}
+.about-left li a{
+	position: relative;
+	display: block;
+	padding-left: 10px;
+	height: 60px;
+	line-height: 60px;
+	text-decoration: none;
+	font-size: 14px;
+	color: #787d82;
+}

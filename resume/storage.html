@@ -1,0 +1,105 @@
+<!Doctype html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" content="text/html charset=utf-8">
+    <title>OnlineResume</title>
+    <meta name="keywords" content="在线简历，大学生求职神器">
+    <meta name="description" content="OnlineResume-在线简历生成器">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="" type="image/x-icon">
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="../static/css/global.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/site.css"/>
+    
+</head>
+<body class="body_wrapper">
+<div class="header_wrap ">
+   <div class="header">
+        <div class="logo">
+            <!--<a href="/"><img src="/img/logo.png" width="120" height="35" alt="在线简历OnlineResume"></a>-->
+        </div>
+        <div class="nav">
+            <ul class="">
+                <li class="active nav_index"><a href="../index.html">首页</a></li>
+                <li><a href="write.html">写简历</a></li>
+                <li><a href="storage.html">简历库</a></li>
+                <li><a href="../wenda/wenda.html">求职问答</a></li>
+            </ul>
+        </div>
+        <!--<form class="nav-search" method="get" action="/search/s">
+            <input type="text" name="q" class="nav-input" value="搜索简历">
+            <a href="#" class="search-btn"></a>
+        </form>-->
+        <div class="menu">
+            <!--<div class="inbox"><a href="{:U('User/notification')}">消息</a></div>-->
+            <div class="menu_islogin">   
+                <div class="uinfo">
+                    <a class="ulink" href="/">
+                       <img src="" width="35" height="35" alt="" title=""/>
+                       <span>一流的人</span>
+                    </a>
+                </div>
+                <ul class="userlist" style="display:none;">
+                    <li><a class="icon icon4" href="/"><i></i><span>个人主页</span></a></li>
+                    <li><a class="icon icon5" href="/"><i></i><span>个人简历</span></a></li>
+                    <li><a class="icon icon6" href="/"><i></i><span>消息中心</span></a></li>
+                    <li><a class="icon icon7" href="/"><i></i><span>收藏</span></a></li>
+                    <li><a class="icon icon8" href="/"><i></i><span>设置</span></a></li>
+                    <li><a class="icon icon9" href="/"><i></i><span>退出</span></a></li>
+                </ul>
+            </div>
+        </div> <!--menu-->  
+   </div> <!--header-->
+</div>
+<div style="height:70px;"></div>
+<div class="container">
+    <div class="main" style="height:1000px;">
+    
+    </div>
+</div>
+
+<div class="clear-footer"></div>
+
+<!--*********************************************footer********************************-->
+<div class="footer">
+<footer class="container">
+    <div class="footer_content clearfix">
+        <div class="footer_left">
+            <p>Power by <a href="http://www.diancreate.com" rel="nofollow">www.diancreate.com</a></p>
+            <p>联系我们<a href="mailto:liuyidi@diancreate.com">liuyidi@diancreate.com</a>.</p>
+        </div>
+        <div class="footer_center">
+            <ul class="list-unstyled">
+                <li><a href="about/us">关于我们</a></li>
+                <li><a href="about/jobs">加入我们</a></li>
+                <li><a href="about/feedback">意见反馈</a></li>
+                <li><a href="about/friendlink">友情链接</a></li>
+            </ul>
+        </div>
+        <div class="footer_right">
+            <ul class="list-unstyled">
+                <li><a href="http://blog.diancreate.com" onclick="pageTracker._link(this.href); return false;">团队博客</a></li>
+                <li><a href="http://weixin.qq.com/diancreate">微信</a></li>
+                <li><a href="https://weibo.com/diancreate">微博</a></li>        
+            </ul>
+        </div>   
+    </div>
+</footer>
+</div>
+<div id="GoTop" class="gotop">
+    <a href="javascript:;" class="gotop-weixin">微信</a>
+    <a href="/about/feedback" class="gotop-msg" target="_blank">意见反馈</a>
+    <a href="m/app" class="gotop-app">App下载</a>
+    <a class="gotop-top" href="#top">返回<br/>顶部</a>
+</div>
+<!--JS-->
+<script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+<script>
+//判断是否成功将Jquery库引入，如果没有成功引入则引入本地Jquery库
+if (typeof jQuery == 'undefined') {
+    document.write("<script type=\"text/javascript\" src=\"../static/js/jquery.min.js\"><\/script>");
+}
+</script>
+<script type="text/javascript" src="../static/js/site.js"></script>
+</body>
+</html>
