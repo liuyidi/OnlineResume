@@ -1,7 +1,7 @@
 onlineResume
 ============
 
-基于Thinkphp和Bootstrap开发的在线简历生成网站
+在线简历
 
 
 ####所用前端组件包括：
