@@ -1,0 +1,10 @@
+.storage{margin-top:10px; height:1200px;}
+.storage-filter{width:1178px; height:250px; margin:0 auto; padding:10px 0; border:1px dashed #333;}
+.storage-content{position:relative; width:1200px; height:auto;}
+.storage-content .storage-resume{position:relative; float:left; z-index:98; width:280px; height:280px; margin:10px; cursor:pointer;}
+.storage-content .storage-resume .storage-pdf{width:280px; height:280px; background:#eee;}
+.storage-content .storage-resume .storage-tools{position:absolute; top:0; left:0; z-index:99; display:none; width:280px; height:280px; line-height:280px; background-color:rgba(0,0,0,.3); color:#fff; text-align:center;}
+.storage-content .storage-resume:hover .storage-tools{display:block;}
+.storage-content .storage-resume .storage-tools .storage-collect{display:inline-block;}
+.storage-content .storage-resume .storage-tools .storage-praise{display:inline-block;margin-left:20px;}
+.storage-pagination{width:1200px; height:300px; margin:0 auto;}
