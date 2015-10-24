@@ -18,7 +18,11 @@ function addEdu(){
 }
 /*修改教育信息*/
 function editEdu(){
+<<<<<<< HEAD
     var eduId = eduId;
+=======
+    var eduId = ;
+>>>>>>> origin/master
     $.get("/resumeEdit/getResumeEdu",data,function(msg){
         var obj = JSON.parse(msg); //解析返回的JSON数据
         //让返回的值赋值给相应的表单数据
