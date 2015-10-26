@@ -1,8 +1,7 @@
 /**
  * Created by liuyidi on 15/10/24.
- * @file:  resume-add
+ * @file:  resumeEdu-add
  */
-
 
 /**
  * 教育信息
@@ -53,25 +52,25 @@ function delEdu(id,obj){
 /*保存*/
 $("resumeEdu-save").click(function(){
     //先验证提交的值
-//    $("#resume_post_JYJL").Validform({
-//        tiptype:3,
-//        beforeSubmit:function(curform){
-//            $.ajax({
-//                type: "POST",
-//                url: "/resumeEdit/toSaveOrUpdate_Resume_edu.do",//${domain_job }
-//                data: $("#resume_post_JYJL").serialize()+"&college_id_flexselect="+$("#college_id_flexselect").val(),
-//                dataType:"html",
-//                success: function(msg){
-//                    $("#resumeedit_edu").html(msg);
-//                    $("#resumeJYJL_edit").hide();
-//                }
-//            });
-//
-//            return false;
-//            //在验证成功后，表单提交前执行的函数，curform参数是当前表单对象。
-//            //这里明确return false的话表单将不会提交;
-//        }
-//    });
+    $("#resume_post_JYJL").Validform({
+        tiptype:3,
+        beforeSubmit:function(curform){
+            $.ajax({
+                type: "POST",
+                url: "/resumeEdit/toSaveOrUpdate_Resume_edu.do",//${domain_job }
+                data: $("#resume_post_JYJL").serialize()+"&college_id_flexselect="+$("#college_id_flexselect").val(),
+                dataType:"html",
+                success: function(msg){
+                    $("#resumeedit_edu").html(msg);
+                    $("#resumeJYJL_edit").hide();
+                }
+            });
+
+            return false;
+            //在验证成功后，表单提交前执行的函数，curform参数是当前表单对象。
+            //这里明确return false的话表单将不会提交;
+        }
+    });
 });
 /*取消*/
 $("#resumeEdu-cancel").click(function(){
