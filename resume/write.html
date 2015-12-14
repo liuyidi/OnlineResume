@@ -10,7 +10,8 @@
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="../static/css/global.css"/>
     <link rel="stylesheet" type="text/css" href="../static/css/site.css"/>
-    
+    <link rel="stylesheet" type="text/css" href="../static/css/write.css"/>
+
 </head>
 <body class="body_wrapper">
 <div class="header_wrap ">
@@ -23,7 +24,7 @@
                 <li class="active nav_index"><a href="../index.html">首页</a></li>
                 <li><a href="write.html">写简历</a></li>
                 <li><a href="storage.html">简历库</a></li>
-                <li><a href="../wenda/wenda.html">求职问答</a></li>
+                <li><a href="../forum/forum.html">求职问答</a></li>
             </ul>
         </div>
         <!--<form class="nav-search" method="get" action="/search/s">
@@ -55,25 +56,43 @@
 <div class="resume container">
     <div class="rmain">
     <div class="left">
-        <a name="a_Basic" id="a_Basic"/>
-        <div class="basic center">
-            <div class="bg">
+
+        <!--基本信息-->
+        <div class="basic common">
+            <h3>基本信息</h3>
+            <div class="basic-edit">
+                <span class="basic-edit-icon">编辑</span>
+                <div class="tooltip">
+                    <span class="tooltip-outer"></span>
+                    <span class="tooltip-inner">编辑</span>
+                </div>
             </div>
-            <div class="img">
-            <form>
-            <input type="file" />
-            </form>
+            <div class="basic-avatar">
+                <div class="avatar-upload">
+                    <img src="" class="avatar-default img-circle" alt=""/>
+                </div>
+                    <!--<input type="file" value="" placeholder="上传头像" />-->
             </div>
-            <div class="information center">
-            <input type="text" name="name" value="" placeholder="姓名" maxlength="4" class="name center" />
-            <input type="text" name="motto" value="" placeholder="座右铭" maxlength="50" class="motto center" />
-            <form>
-            <ul>
-                <li class="margin_left11">电话：<input type="text" name="mobile" value="" placeholder="电话号码" maxlength="11" class="mobile"/ ></li>
-                <li class="margin_left3">E-mail：<input type="text" name="email" value="" placeholder="xyz@mn.com" maxlength="" class="email" /></li>     
-            </ul>
-            </form>
-                <div class="logo auto">
+            <div class="basic-info center">
+                <span class="basic-name" contentEditable="true">刘一帝</span>
+                <!--<input type="text" name="name" value="刘一帝" placeholder="姓名" maxlength="4" class="name center" />-->
+                <div class="basic-motto" title="motto" contentEditable="true">Just do a Full Stack Engineer!</div>
+                <div class="basic-contactInfo">
+                    <div class="label">电话：</div>
+                    <input type="text" name="mobile" value="" placeholder="电话号码" maxlength="11" class="mobile"/ >
+                    <div class="margin_left3">邮箱：</div>
+                    <input type="text" name="email" value="" placeholder="xyz@mn.com" maxlength="" class="email" />
+                </div>
+                <div class="basic-state">
+                    <div class="label">求职状态：</div>
+                    <select name="work-state" id="">
+                        <option disabled selected>请选择</option>
+                        <option value="active">正在找工作</option>
+                        <option value="passive">观望中,有好工作可以考虑</option>
+                        <option value="inactive">目前暂时不想换工作</option>
+                    </select>
+                </div>
+                <div class="basic-social">
                     <ul>
                         <li>1</li>
                         <li>2</li>
@@ -86,45 +105,46 @@
                 </div>
             </div>
         </div>
-        
-        <a name="a_Education" id="a_Education"/>
-        <div class="education">
-        教育经历
-        <hr />
-            <ul>
-            <div><input type="button" onclick="add()" value="添加" /></div>
-            <div id="top"></div>
+
+        <!--教育经历-->
+        <div class="education common">
+            <h3 class="education-title">教育经历</h3>
+            <div class="education-add">
+                <span class="edu-add-icon">+</span>
+                <div class="tooltip">
+                    <span class="tooltip-outer"></span>
+                    <span class="tooltip-inner">添加教育经历</span>
+                </div>
+            </div>
+            <ul class="education-list">
                 <li>
+                    <span class="edu-time">2011.9——2015.7</span>
+                    <span class="edu-university">广西大学</span>
+                    <span class="edu-specialty">电子商务</span>
+                    <span class="edu-degree">本科</span>
+                    <span class="education-del">x</span>
+                </li>
+                <li>
+                    <span class="edu-time">2011.9——2015.7</span>
+                    <span class="edu-university">广西大学</span>
+                    <span class="edu-specialty">电子商务</span>
+                    <span class="edu-degree">本科</span>
+                    <span class="education-del">x</span>
+                </li>
+            </ul>
+            <form class="education-form hide" id="">
                 <input type="text" name="start" value="2012/09" placeholder="起始日期" maxlength="7" class="start"/>-
                 <input type="text" name="start" value="至今" placeholder="结束日期" maxlength="7"   class="end"/>
                 <input type="text" name="university" value="广西大学" placeholder="学校" maxlength="10"  class="university"/>
-                <input type="text" name="academy" value="计算机与电子信息学院" placeholder="学院" maxlength="10"  class="academy"/>
-                <input type="text" name="specialty" value="专业" placeholder="专业" maxlength="10" class="specialty"/>
-                <input type="text" name="degree" value="专科" placeholder="学位" maxlength="10"  class="degree"/>
-                </li>
-                <li>
-                <input type="text" name="start" value="2012/09" placeholder="起始日期" maxlength="7" class="start"/>-
-                <input type="text" name="start" value="2013/09" placeholder="结束日期" maxlength="7"   class="end"/>
-                <input type="text" name="university" value="广西大学" placeholder="学校" maxlength="10"  class="university"/>
-                <input type="text" name="academy" value="计算机与电子信息学院" placeholder="学院" maxlength="10"  class="academy"/>
-                <input type="text" name="specialty" value="专业" placeholder="专业" maxlength="10" class="specialty"/>
-                <input type="text" name="degree" value="专科" placeholder="学位" maxlength="10"  class="degree"/>
-                </li>
-                <li>
-                <input type="text" name="start" value="2012/09" placeholder="起始日期" maxlength="7" class="start"/>-
-                <input type="text" name="start" value="2013/09" placeholder="结束日期" maxlength="7"   class="end"/>
-                <input type="text" name="university" value="广西大学" placeholder="学校" maxlength="10"  class="university"/>
-                <input type="text" name="academy" value="计算机与电子信息学院" placeholder="学院" maxlength="10"  class="academy"/>
-                <input type="text" name="specialty" value="专业" placeholder="专业" maxlength="10" class="specialty"/>
-                <input type="text" name="degree" value="专科" placeholder="学位" maxlength="10"  class="degree"/>
-                </li>
-                
-            </ul>
+                <input type="text" name="specialty" value="电子商务" placeholder="专业" maxlength="10" class="specialty"/>
+                <input type="text" name="degree" value="本科" placeholder="学位" maxlength="10"  class="degree"/>
+                <input type="submit" id="resumeEdu-save" value="保存">
+                <button id="resumeEdu-cancel">取消</button>
+            </form>
         </div>
-        <a name="a_Internship" id="a_Internship"/>
-        <div class="Internship">
-        实习经历
-        <hr />
+        <!--工作经历-->
+        <div class="Internship common">
+            <h3>工作经历</h3>
             <ul>
                 <li>
                     <form>
@@ -168,15 +188,14 @@
                 </li>
             </ul>
         </div>
-        <a name="a_Project" id="a_Project"/>
-        <div class="project">
-        项目经历
-        <hr />
+
+        <div class="project common">
+            <h3>项目经历</h3>
+
         </div>
-        <a name="a_Technical" id="a_Technical"/>
-        <div class="technical">
-        技术水平
-        <hr />
+
+        <div class="technical common">
+            <h3>技术水平</h3>
         <ul>
                 <li>
                     <p contenteditable="true" name="myassess" class="myassess">擅长。。。。。</p>
@@ -192,47 +211,9 @@
                 </li>
             </ul>
         </div>
-        <a name="a_School_Awards" id="a_School_Awards"/>
-        <div class="school_Awards">
-        校内奖励
-        <hr />
-            <ul>
-                <li>
-                    <form>
-                        <input type="text" name="start" value="2012/09" placeholder="起始日期" maxlength="7" cache-data="2012/09" class="start">-
-                        <input type="text" name="end" value="2012/11" placeholder="结束日期" maxlength="7" cache-data="2012/11"  class="end">
-                        <input type="text" name="award" value="创新大赛" placeholder="奖项名称" maxlength="20" class="award center">
-                        <input type="text" name="level" value="一等奖" placeholder="" maxlength="3"  class="level center">
-                        <input type="text" name="rank" value="前1%" placeholder="排名" maxlength="5" class="rank center">
-                        <input type="text" name="number" value="共1次" placeholder="获奖次数" maxlength="3" class="number center">
-                    </form>
-                </li>
-                <li>
-                    <form>
-                        <input type="text" name="start" value="2012/09" placeholder="起始日期" maxlength="7" cache-data="2012/09" class="start">-
-                        <input type="text" name="end" value="2012/11" placeholder="结束日期" maxlength="7" cache-data="2012/11"  class="end">
-                        <input type="text" name="award" value="创新大赛" placeholder="奖项名称" maxlength="20" class="award center">
-                        <input type="text" name="level" value="一等奖" placeholder="" maxlength="3"  class="level center">
-                        <input type="text" name="rank" value="前1%" placeholder="排名" maxlength="5" class="rank center">
-                        <input type="text" name="number" value="共1次" placeholder="获奖次数" maxlength="3" class="number center">
-                    </form>
-                </li>
-                <li>
-                    <form>
-                        <input type="text" name="start" value="2012/09" placeholder="起始日期" maxlength="7" cache-data="2012/09" class="start">-
-                        <input type="text" name="end" value="2012/11" placeholder="结束日期" maxlength="7" cache-data="2012/11"  class="end">
-                        <input type="text" name="award" value="创新大赛" placeholder="奖项名称" maxlength="20" class="award center">
-                        <input type="text" name="level" value="一等奖" placeholder="" maxlength="3"  class="level center">
-                        <input type="text" name="rank" value="前1%" placeholder="排名" maxlength="5" class="rank center">
-                        <input type="text" name="number" value="共1次" placeholder="获奖次数" maxlength="3" class="number center">
-                    </form>
-                </li>
-            </ul>
-        </div>
-        <a name="a_Campus_Experience" id="a_Campus_Experience"/>
-        <div class="campus_Experience">
-        校内经验
-        <hr />
+
+        <div class="campus_Experience common">
+            <h3>校内经验</h3>
             <ul>
                 <li>
                     <form>
@@ -299,10 +280,9 @@
                 </li>
             </ul>
         </div>
-        <a name="a_Personal" id="a_Personal"/>
-        <div class="personal">
-        个人评价
-        <hr />
+
+        <div class="personal common">
+            <h3>个人评价</h3>
             <ul>
                 <li>
                     <p contenteditable="true" name="myassess" class="myassess">我是你的小丫小苹果</p>
@@ -321,7 +301,7 @@
     </div>
     </div>
 
-    <div id="sidebar" class="rsider">  
+    <div id="sidebar" class="">
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <h3 class="panel-title">个人信息</h3>
@@ -396,6 +376,8 @@ if (typeof jQuery == 'undefined') {
     document.write("<script type=\"text/javascript\" src=\"../static/js/jquery.min.js\"><\/script>");
 }
 </script>
-<script type="text/javascript" src="../static/js/site.js"></script>
+<script type="text/javascript" src="../static/js/global.js"></script>
+<script type="text/javascript" src="../static/js/resume/sidebar.js"></script>
+<script type="text/javascript" src="../static/js/resume/resumeEdu.js"></script>
 </body>
 </html>

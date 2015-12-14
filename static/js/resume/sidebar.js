@@ -11,7 +11,7 @@
 	};
 	window.onscroll = function(){
 		var s = document.body.scrollTop || document.documentElement.scrollTop;
-		if( s>H ){
+		if( s+60 >H ){
 			oDiv.className = "sidebar sidebar-fixed";			
 		}else{
 			oDiv.className = "sidebar";

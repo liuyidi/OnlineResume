@@ -10,20 +10,21 @@
     <!--CSS-->
     <link rel="stylesheet" type="text/css" href="static/css/global.css"/>
     <link rel="stylesheet" type="text/css" href="static/css/site.css"/>
-    
+
 </head>
 <body class="body_wrapper">
-<div class="header_wrap ">
+<div class="header_wrap">
    <div class="header">
         <div class="logo">
-            <a href="/"><img src="static/img/logo3.png" width="120" height="60" alt="在线简历OnlineResume"></a>
+            <a href="/"><img src="static/images/logo3.png" width="120" height="60" alt="在线简历OnlineResume"></a>
         </div>
         <div class="nav">
             <ul class="">
                 <li class="active nav_index"><a href="index.html">首页</a></li>
                 <li><a href="resume/write.html">写简历</a></li>
                 <li><a href="resume/storage.html">简历库</a></li>
-                <li><a href="wenda/wenda.html">求职问答</a></li>
+                <li><a href="forum/forum.html">求职问答</a></li>
+                <li><a href="show/index.html">简历秀</a></li>
             </ul>
         </div>
         <!--<form class="nav-search" method="get" action="/search/s">
@@ -40,12 +41,12 @@
                     </a>
                 </div>
                 <ul class="userlist">
-                    <li><a class="icon icon4" href="/"><i></i><span>个人主页</span></a></li>
+                    <li><a class="icon icon4" href="user/user.html"><i></i><span>个人主页</span></a></li>
                     <li><a class="icon icon5" href="/"><i></i><span>个人简历</span></a></li>
                     <li><a class="icon icon6" href="/"><i></i><span>消息中心</span></a></li>
                     <li><a class="icon icon7" href="/"><i></i><span>收藏</span></a></li>
                     <li><a class="icon icon8" href="/"><i></i><span>设置</span></a></li>
-                    <li><a class="icon icon9" href="/"><i></i><span>退出</span></a></li>
+                    <li><a class="icon icon9" href="javascript:logout();"><i></i><span>退出</span></a></li>
                 </ul>
             </div>
         </div> <!--menu-->  
@@ -200,6 +201,44 @@
     <a href="m/app" class="gotop-app">App下载</a>
     <a class="gotop-top" href="#top">返回<br/>顶部</a>
 </div>
+
+<!--意见反馈-->
+
+<!--<div id="feedback">-->
+    <!--<div id="feedback-icon">-->
+        <!--<div class="feedback-iconw">-->
+            <!--<i></i>-->
+            <!--<span>我要反馈</span>-->
+        <!--</div>-->
+        <!--<em class="error fb-limit">-->
+            <!--今天反馈的已经超过限制。-->
+            <!--<i></i>-->
+        <!--</em>-->
+        <!--<em class="error hide fb-suc">-->
+            <!--反馈提交成功!-->
+        <!--</em>-->
+    <!--</div>-->
+    <!--<div id="feedback-content">-->
+        <!--<div class="feedback-close">x</div>-->
+        <!--<textarea name="" id="" cols="30" rows="10"></textarea>-->
+        <!--<input type="text" name="email"/>-->
+        <!--<em class="error hide">-->
+            <!--<span>您还没填写反馈呢</span>-->
+            <!--<i></i>-->
+        <!--</em>-->
+        <!--<input type="hidden" id="login-email" value/>-->
+        <!--<input type="hidden" id="login-phone" value/>-->
+        <!--<input type="hidden" id="login-usertoken" value/>-->
+    <!--</div>-->
+    <!--<script>-->
+        <!--//定义全局配置-->
+        <!--window.global = window.global || {};-->
+        <!--global.email = "";  //用户登录邮箱-->
+        <!--global.usertoken = jQuery.cookie('user-token');  //用户登录信息-->
+        <!--global.idMd5 = "";  //md5加密后的ID-->
+    <!--</script>-->
+<!--</div>-->
+
 <!--JS
 <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
 <script>
@@ -210,9 +249,9 @@ if (typeof jQuery == 'undefined') {
 </script>
 <script src="http://lib.sinaapp.com/js/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 -->
-<script src="static/js/jquery.min.js"></script>
-<script src="static/js/jiaodiantu.js"></script>
-<script src="static/js/nav.js"></script>
+<script src="static/js/lib/jquery.min.js"></script>
+<script src="static/js/index.js"></script>
+<script src="static/js/global.js"></script>
 
 </body>
 </html>

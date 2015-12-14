@@ -1,6 +1,6 @@
 /**
  * Created by liuyidi on 15/10/24.
- * @file:  resumeEdu-add
+ * @file:  resumeEdu.js
  */
 
 /**
@@ -8,13 +8,10 @@
  */
 
 /*添加教育信息*/
-function addEdu(){
-    //让val都为空
+$(".education-add").click(function(e){
+    $(e.target).parents(".education").find(".education-form").slideDown();
+});
 
-    $("").hide();
-    //#resumeEdu-add 可以和 #resumeEdu-edit使用同一套模版
-    $("#resumeEdu-add").show();
-}
 /*修改教育信息*/
 function editEdu(){
 
@@ -28,7 +25,7 @@ function editEdu(){
     });
 }
 /*删除教育信息*/
-$("#resumeEdu-del").click(function(){
+$(".education-del").click(function(){
     $.MsgBox.Confirm("温馨提示","您确定要删除此项教育经历？",function(){
         //obj.id 为该教育经历的ID
         delEdu(obj.id , this);
@@ -46,7 +43,7 @@ function delEdu(id,obj){
         url: "/resumeEdit/toDelResumeAbout.do",
         data: paramObj,
         success: function(msg){
-            $("#resumeEdu-info").hide(); //清除某项教育经历
+            $("#resumeEdu-info").remove(); //清除某项教育经历
         }
     });
 }
@@ -76,6 +73,6 @@ $("resumeEdu-save").click(function(){
 });
 /*取消*/
 $("#resumeEdu-cancel").click(function(){
-    $("#resumeEdu-edit").hide();
+    $(".education-form").slideUp();
     self.location.href="#resumeEdu-edit";  //给链接加hash＃
 });

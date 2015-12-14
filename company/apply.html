@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>招聘企业入驻申请表</title>
+    <!--CSS-->
+    <link rel="stylesheet" type="text/css" href="../static/css/global.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/site.css"/>
+    <link rel="stylesheet" type="text/css" href="../static/css/apply.css"/>
+
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <a href="/"><img src="../static/images/logo3.png" width="120" height="60" alt="在线简历OnlineResume"></a>
+    </div>
+    <div class="nav">
+        <span>招聘企业在线申请表</span>
+    </div>
+    <div class="menu">
+        <div class="menu_islogin" id="isLogin" style="display:none;">
+            <div class="uinfo">
+                <a class="ulink" href="/">
+                    <img id="userAvatar" src="" width="35" height="35" alt="" title=""/>
+                    <span id="userName">一流的人</span>
+                </a>
+            </div>
+            <ul class="userlist">
+                <a href="javascript:logout();">退出</a>
+            </ul>
+        </div>
+        <div class="menu_unlogin" id="unLogin">
+            <a href="javascript:login();">登录</a>
+            <a href="javascript:register();">注册</a>
+        </div>
+    </div> <!--menu-->
+</div> <!--header-->
+<div class="apply">
+    <div class="apply-side">
+        <div class="apply-side-box">
+            <ul class="apply-side-bar" id="nav">
+                <li class="current">
+                    <a href="#basicInfo" class="btn btn-red">基本信息</a>
+                </li>
+                <li>
+                    <a href="#comInfo" class="btn">公司信息</a>
+                </li>
+            </ul>
+        </div>
+        <div class="apply-description">
+            <ol>
+                <li>1.请准确填写信息</li>
+                <li>2.信息一旦填写,很难更改</li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+    <div class="apply-form">
+        <div class="apply-form-box" id="basicInfo">
+            <h2 class="title">基本信息</h2>
+            <div class="apply-form-body">
+                <div class="apply-item" data-validate="notnull">
+                    <label class="item-label" for="comName">
+                        <i>*</i>
+                        <span>公司名称</span>
+                    </label>
+                    <input type="text" name="comName" class="item-input item-input-name" placeholder="请输入公司名称"/>
+                    <p class="i-error"></p>
+                </div>
+                <div class="apply-item" data-validate="notnull">
+                    <label class="item-label" for="userName">
+                        <i>*</i>
+                        <span>姓名</span>
+                    </label>
+                    <input type="text" name="name" class="item-input item-input-name" placeholder="请输入姓名"/>
+                    <p class="i-error"></p>
+                </div>
+                <div class="apply-item" data-validate="notnull">
+                    <label class="item-label" for="phone">
+                        <i>*</i>
+                        <span>手机号</span>
+                    </label>
+                    <input type="text" name="phone" class="item-input item-input-phone" placeholder="请填写准确的手机号"/>
+                    <p class="i-error"></p>
+                </div>
+                <div class="apply-item">
+                    <label class="item-label" for="email">
+                        <i>*</i>
+                        <span>邮箱</span>
+                    </label>
+                    <input type="text" name="email" class="item-input item-input-email" placeholder="请输入邮箱"/>
+                    <p class="i-error"></p>
+                </div>
+                <div class="apply-item">
+                    <label class="item-label" for="city">
+                        <i>*</i>
+                        <span>所在城市</span>
+                    </label>
+                    <input type="text" name="city" class="item-input item-input-city" placeholder="请输入邮箱"/>
+                    <p class="i-error"></p>
+                </div>
+            </div>
+        </div>
+        <div class="apply-form-box"  id="comInfo">
+            <h2 class="title">公司信息</h2>
+            <div class="apply-form-body">
+                <div class="apply-item apply-item-pro" data-validate="textareanull">
+                    <label class="item-label" for="comSketch">
+                        <i>*</i>
+                        <span>公司简介</span>
+                    </label>
+                    <textarea name="comSketch" class="item-textarea item-textarea-comSketch">
+                    </textarea>
+                    <span class="textarea-info">请输入公司介绍,不超过100字</span>
+                    <p class="i-error"></p>
+                </div>
+                <div class="apply-item apply-item-pro" data-validate="textareanull">
+                    <label class="item-label" for="proSketch">
+                        <i>*</i>
+                        <span>产品简介</span>
+                    </label>
+                    <textarea name="proSketch" class="item-textarea item-textarea-proSketch">
+                    </textarea>
+                    <span class="textarea-info">请输入项目介绍,不超过100字</span>
+                    <p class="i-error"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+
+</div>
+<script src="../static/js/lib/jquery.min.js"></script>
+<script src="../static/js/lib/jquery.navScrollSpy.js"></script>
+<script src="../static/js/common/form-validate.js"></script>
+<script src="../static/js/apply/apply.js"></script>
+</body>
+</html>

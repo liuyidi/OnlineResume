@@ -1,0 +1,14 @@
+
+/*首屏*/
+.prime{}
+.categorys{}
+/*首屏－侧边分类*/
+.cate-wrap{}
+.cate-sidenav{width:210px; height:;}
+.cate-sidenav .cate-item{width:210px; background:#eee;}
+.cate-sidenav .cate-item .cate-item-cont{width:170px; padding:16px 0; margin:0 20px; border-bottom:1px solid #ddd;}
+
+.cate-content{}
+
+/*首屏－焦点图*/
+.prime-slide{}

@@ -1,0 +1,59 @@
+/*flat-ui css*/
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus,
+input[type="datetime"]:focus, input[type="datetime-local"]:focus,
+input[type="date"]:focus, input[type="month"]:focus,
+input[type="time"]:focus, input[type="week"]:focus,
+input[type="number"]:focus, input[type="email"]:focus,
+input[type="url"]:focus, input[type="search"]:focus,
+input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: #1abc9c;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline:0;
+}
+
+select,option,textarea, input[type="text"], input[type="password"],
+input[type="datetime"], input[type="datetime-local"],
+input[type="date"], input[type="month"], input[type="time"],
+input[type="week"], input[type="number"], input[type="email"],
+input[type="url"], input[type="search"], input[type="tel"],
+input[type="color"], .uneditable-input {
+    border: 1px solid #dce4ec;
+    color: #34495e;
+    font-family: "Lato", sans-serif;
+    font-size: 14px;
+    padding: 8px 0 9px 10px;
+    text-indent: 1px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/*全局信息*/
+
+.resume input{width:148px; height:32px; line-height:32px;padding:0 15px; margin-bottom:5px;border-radius:3px; outline:none; border:1px solid #ddd;}
+.resume select,option{width:178px; height:32px;line-height:32px;padding:0 15px;margin-bottom:5px}
+
+.hide{display:none;}
+.common{padding:20px; border-bottom:1px solid #ddd;}
+.tooltip{position:absolute; top:60px; right:10px; z-index:9; background:#333; border-radius:2px; padding:5px; color:#fff; display:none;}
+.tooltip-outer{position: absolute;left: 50%;top: 0;margin-left: -10px; margin-top: -20px;border: 10px solid transparent;border-bottom-color: #333;}
+.tooltip-inner{}
+/*基本信息*/
+.basic{position:relative;}
+.basic-info .basic-motto{width:248px; height:32px; line-height:32px;padding:0 15px; margin-bottom:5px;}
+.basic-edit .basic-edit-icon{position:absolute; top:20px; right:50px; height:33px; line-height:33px; display:inline-block;font-size:20px; cursor:pointer;}
+/*教育信息*/
+.education{position:relative;}
+.education-title{}
+.education-add{}
+.education-add .edu-add-icon{position:absolute; top:20px; right:50px; height:33px; line-height:33px; display:inline-block;font-size:20px; cursor:pointer;}
+.education-add:hover .tooltip{display:block;}
+.education-list li{position:relative; cursor:pointer;margin-bottom:10px;}
+.education-list li span{font-size:16px; margin-right:20px;}
+.education-list li .education-del{float:right; margin-right:33px; display:none;}
+.education-list li:hover .education-del{display:block;}

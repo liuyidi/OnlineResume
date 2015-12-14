@@ -16,14 +16,14 @@
 <div class="header_wrap ">
    <div class="header">
         <div class="logo">
-            <a href="/"><img src="../static/img/logo3.png" width="120" height="35" alt="在线简历OnlineResume"></a>
+            <a href="/"><img src="../static/images/logo3.png" width="120" height="35" alt="在线简历OnlineResume"></a>
         </div>
         <div class="nav">
             <ul class="">
                 <li class="active nav_index"><a href="../index.html">首页</a></li>
                 <li><a href="write.html">写简历</a></li>
                 <li><a href="storage.html">简历库</a></li>
-                <li><a href="../wenda/wenda.html">求职问答</a></li>
+                <li><a href="../forum/forum.html">求职问答</a></li>
             </ul>
         </div>
         <!--<form class="nav-search" method="get" action="/search/s">
@@ -51,85 +51,82 @@
         </div> <!--menu-->  
    </div> <!--header-->
 </div>
-<div style="height:70px;"></div>
 <div class="storage container">
     <div class="storage-filter">
-        筛选
+        <div class="filter-list">
+            <div class="filter-city">
+                <h3>城市</h3>
+                <ol class="filter-cityList">
+                    <li>北京</li>
+                    <li>上海</li>
+                    <li>广州</li>
+                    <li>深圳</li>
+                    <li>杭州</li>
+                </ol>
+            </div>
+            <div class="filter-title">
+                <h3>职位</h3>
+                <ol class="filter-titleList">
+                    <li>Java</li>
+                    <li>PHP</li>
+                    <li>Web前端</li>
+                    <li>Android</li>
+                    <li>IOS</li>
+                </ol>
+            </div>
+            <div class="filter-experience">
+                <h3>工作年限</h3>
+                <ol class="filter-expList">
+                    <li>应届毕业生</li>
+                    <li>1年以下</li>
+                    <li>1-3年</li>
+                    <li>3-5年</li>
+                    <li>5-10年</li>
+                    <li>10年以上</li>
+                </ol>
+            </div>
+        </div>
+        <div class="filter-cate">
+            <div class="filter-defaultCate">默认分类</div>
+            <div class="filter-favoriteCate">收藏最多</div>
+            <div class="filter-likeCate">点赞最多</div>
+        </div>
     </div>
     <div class="storage-content">
-        <div class="storage-resume">
-            <div class="storage-pdf">
-                <img src="" alt=""/>
-            </div>
-            <div class="storage-tools">
-                <div class="storage-collect">收藏</div>
-                <div class="storage-praise">点赞</div>
-            </div>
-        </div>
-        <div class="storage-resume">
-            <div class="storage-pdf">
-                <img src="" alt=""/>
-            </div>
-            <div class="storage-tools">
-                <div class="storage-collect">收藏</div>
-                <div class="storage-praise">点赞</div>
-            </div>
-        </div>
-        <div class="storage-resume">
-            <div class="storage-pdf">
-                <img src="" alt=""/>
-            </div>
-            <div class="storage-tools">
-                <div class="storage-collect">收藏</div>
-                <div class="storage-praise">点赞</div>
-            </div>
-        </div>
-        <div class="storage-resume">
-            <div class="storage-pdf">
-                <img src="" alt=""/>
-            </div>
-            <div class="storage-tools">
-                <div class="storage-collect">收藏</div>
-                <div class="storage-praise">点赞</div>
-            </div>
-        </div>
-        <div class="storage-resume">
-            <div class="storage-pdf">
-                <img src="" alt=""/>
-            </div>
-            <div class="storage-tools">
-                <div class="storage-collect">收藏</div>
-                <div class="storage-praise">点赞</div>
-            </div>
-        </div>
-        <div class="storage-resume">
-            <div class="storage-pdf">
-                <img src="" alt=""/>
-            </div>
-            <div class="storage-tools">
-                <div class="storage-collect">收藏</div>
-                <div class="storage-praise">点赞</div>
-            </div>
-        </div>
-        <div class="storage-resume">
-            <div class="storage-pdf">
-                <img src="" alt=""/>
-            </div>
-            <div class="storage-tools">
-                <div class="storage-collect">收藏</div>
-                <div class="storage-praise">点赞</div>
-            </div>
-        </div>
-        <div class="storage-resume">
-            <div class="storage-pdf">
-                <img src="" alt=""/>
-            </div>
-            <div class="storage-tools">
-                <div class="storage-collect">收藏</div>
-                <div class="storage-praise">点赞</div>
-            </div>
-        </div>
+        <!--<div class="storage-resume" data-resumeId="1001">-->
+            <!--<div class="storage-pdf">-->
+                <!--<img src="" alt=""/>-->
+            <!--</div>-->
+            <!--<div class="storage-tools">-->
+                <!--<div class="storage-favorite">收藏</div>-->
+                <!--<div class="storage-like">-->
+                    <!--<span>点赞</span>-->
+                    <!--<span class="storage-likeNum"></span>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
+    <!--artTemplate模版-->
+    <script id="tpl_resume_item" type="text/html">
+        <div class="storage-resume" data-resumeId="{{rid}}">
+            <div class="storage-pdf">
+                <img src="" alt=""/>
+            </div>
+            <div class="storage-info">
+                <div class="storage-owner">{{owner}}</div>
+                <h2>{{title}}</h2>
+                <span class="storage-time">{{createTime}}</span>
+            </div>
+            <div class="storage-tools">
+                <div class="storage-favorite">收藏</div>
+                <div class="storage-like">
+                    <span>点赞</span>
+                    <span class="storage-likeNum">{{voteNum}}</span>
+                </div>
+            </div>
+        </div>
+    </script>
+    <!--分页-->
     <div class="storage-pagination">
 
     </div>
@@ -175,6 +172,47 @@ if (typeof jQuery == 'undefined') {
     document.write("<script type=\"text/javascript\" src=\"../static/js/jquery.min.js\"><\/script>");
 }
 </script>
-<script type="text/javascript" src="../static/js/site.js"></script>
+<script src="../static/js/global.js"></script>
+<script src="../static/js/storage/storage.js"></script>
+<!--<script src="../static/js/require.js"></script>-->
+<!--<script src="http://mockjs.com/dist/mock.js"></script>-->
+<script src="../static/js/lib/artTemplate.js"></script>
+<script>
+//    //配置路径
+//    require.config({
+//        paths:{
+//            'mock':'http://mockjs.com/dist/mock'
+//        }
+//    });
+//
+//    //加载Mock
+//    require(['mock'], function(Mock){
+        //简历模版数据
+        var json = {
+            'rid': 1001,
+            'title': 'resume',
+            'owner': 'liuyidi',
+            'voteNum': 10,
+            'favoriteNum': 20,
+            'createTime': "2015-12-04"
+        };
+        //使用Mock
+//        var data = Mock.mock('../mock/resume.json',json);
+        var data = json;
+        //ajax调用数据
+        $.ajax({
+            url: '../mock/resume.json',
+            dataType: 'json'
+        }).done(function(data, status, jqXHR){
+            //采用artTemplate模版解析
+            //$(".storage-resume").text(JSON.stringify(data,null,4)).appendTo('.storage-content');
+//            console.log(data);
+//            var data = JSON.stringify(data,null,4);
+//            console.log(data);
+            var html =template('tpl_resume_item', data);
+            $(".storage-content").html(html);
+        });
+//    });
+</script>
 </body>
 </html>

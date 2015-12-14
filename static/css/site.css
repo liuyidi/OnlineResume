@@ -103,12 +103,13 @@ ul.pagination li.active a{
 .rmain{background-color:#fff; width:76%; height:auto; display:inline; float:left; border:1px solid #d9d9d9; margin-bottom:50px;}
 .rsider{width:18%; background-color:#fff; display:inline; float:right; height:auto; border:1px solid #d9d9d9;}
 
-.sidebar{width: 216px; }
+
+.sidebar{width: 216px; position: absolute; right: 100px;}
 .sidebar-fixed{position: fixed; _position:absolute; top:70px; right:100px; z-index: 250px;}
 
 /*******************************************Login&register******************************************/
 
-input[type="text"],input[type="password"]{border:1px solid #f1f1f1; outline:none; font:16px "微软雅黑",Arial; height:40px; padding:6px 10px;}
+input[type="text"],input[type="password"]{border:1px solid #f1f1f1; outline:none; font:14px "微软雅黑",Arial; height:20px; padding:7px 10px;}
 
 .login_wrapper{width:760px; margin:0 auto; color:#777; font-size:16px; padding-top:80px; zoom:1;}
 .login_box{min-height:300px; background:#fff; padding:40px; overflow:hidden; position:relative;}

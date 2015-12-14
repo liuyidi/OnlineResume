@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .img-circle{border-radius:50%;border:2px solid #333;}
+    </style>
+    <script src="../static/js/lib/jquery.min.js"></script>
+    <script src="../static/js/lib/artTemplate.js"></script>
+</head>
+<body>
+
+<div id="dynamic_topic">
+
+</div>
+<!--动态问答信息流-->
+
+<!--采用artTemplate-->
+<script id="tpl_dynamic_topic_item" type="text/html">
+    {{if isAdmin}}
+    <li class="dynamic_topic_list_item">
+         <a href="{{topicUrl}}" target="_blank">
+            <div class="dynamic_topic_list_item_head clear-fix">
+                <i class="left icon_sprite icon_question_mark"></i>
+                <div class="left clear-fix title">
+                    <h6 class="left one_line">{{title}}</h6>
+                    <span class="right create_time text_grey">{{topicCreateTime}}</span>
+                    <em class="icon_sprite_s right icon_user_orange text_grey">{{replyNum}}</em>
+                    <em class="icon_sprite_s right icon_see_orange text_grey">{{visitorNum}}</em>
+                </div>
+            </div>
+            <div class="dynamic_topic_list_item_content clear-fix">
+                <span class="left user-avatar">
+                    <img src="{{user.imgUrl}}" data-imgurl="{{user.imgUrl}}"  alt="{{user.nickName}}用户头像"/>
+                </span>
+                <p class="reply_
+                main one_line left">
+                    <span class="reply_owner">{{user.nickName}}: </span>
+                    <span class="reply_content">&{{replyContent}}</span>
+                </p>
+                <i class="right reply_icon icon_sprite"></i>
+                <span class="right reply_link_text">去看看</span>
+            </div>
+        </a>
+    </li>
+    {{/if}}
+</script>
+
+<script>
+    var json = {
+        isAdmin: true,      //是否是管理员
+        topicUrl: 'www.baidu.com',       //问题链接
+        title: '是否好用？',          //问题标题
+        topicCreateTime: '2015-11-14',    //问题创建时间
+        replyNum: '10',           //问题回复数
+        visitorNum: '23',         //问题访问量
+        user: {
+            imgUrl: '../static/images/defaultAvatar.png',         //用户头像链接
+            nickName: '一流的人'        //用户昵称
+        },
+        replyContent: '这个东东好用吗？'        //问题内容
+//        list: ['1','2','3','4']
+    };
+    var html =template('tpl_dynamic_topic_item', json);
+    $("#dynamic_topic").html(html);
+</script>
+<!--所有的对话框-->
+<div class="dialogs_container">
+    <!--dialog:我要提问-->
+    <div class="dialogs_ask_container" id="dialogs_ask_container">
+        <div class="left block-w dialog_ask_brand">
+            <span class="dialog_ask_brand_img_wrapper">
+                <img class="img-circle" src="../static/images/defaultAvatar.png" alt="默认头像"/>
+            </span>
+            <div class="dialog_ask_brand_tip">
+                <p class="text_bold"></p>
+                <p>赶快创建话题,让大家帮你解决</p>
+            </div>
+        </div>
+        <div class="left dialog_ask_text block">
+            <div class="ui-simple-tabs" id="askQuestionTabs"></div>
+            <div id="dialog_ask_form_repeat_tip" class="tip_arrow_warn_wrapper tip-for-button"></div>
+            <span class="left dialog_ask_close dialog_close"></span>
+        </div>
+    </div>
+    <!--dialog:小纸条-->
+    <!--dialog:我的话题-->
+    <!--dialog:所有勋章-->
+</div>
+<div class="footer">
+    <p class="copyright">copyright 2013-2014</p>
+    <p>power by Question2Answer</p>
+</div>
+<script data-main="../static/js/forum/main" src="../static/js/require.js"></script>
+<script src="../static/js/common/common.js"></script>
+</body>
+</html>
