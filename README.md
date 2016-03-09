@@ -8,8 +8,9 @@ onlineResume
 - 写简历
     - 注册成功,从邮箱中点击链接以后第一步跳转到写简历页面。
     - 编辑表单信息
-    - 可以预览PDF格式
+    - 可以预览PDF格式(https://github.com/MrRio/jsPDF)
     - 保存为公有简历和私有简历
+    - [参考](http://jingyan.baidu.com/edit/content?tagName=%E7%BE%8E%E5%91%B3)
 - 简历库(公用简历库) (/resume)
     - 进行Search框通用搜索
     - 进行排序筛选
@@ -19,6 +20,7 @@ onlineResume
     - 管理简历(私有简历&公有简历)
     - 设置个人信息
     - 收藏信息
+    - 关注信息
     - 问答信息
 - 消息中心 (/message)
     - 简历消息
@@ -69,3 +71,7 @@ onlineResume
 3. 使用Less进行css的编写 
 4. 使用grunt进行压缩，合并等
 5. 试着采用独自编写的DUI作为UI组件库
+6. 使用jQuery作为DOM操作工具
+7. 部分功能单页使用Backbone或者angular
+8. 移动端部分采用zepto+backbone
+9. 试着用react native/ionic写android或者ios应用
